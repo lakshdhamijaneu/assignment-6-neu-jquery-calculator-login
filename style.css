@@ -1,0 +1,61 @@
+/* partA/css/style.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f0f4f8;
+  color: #333;
+}
+.login-container,
+.calculator {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+}
+label {
+  display: block;
+  margin-top: 1rem;
+}
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+}
+button {
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+.error {
+  color: red;
+  font-size: 0.9rem;
+}
+.success {
+  color: green;
+  margin-top: 1rem;
+}
+.operations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.calc-header {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .operations {
+    flex-direction: column;
+  }
+}
