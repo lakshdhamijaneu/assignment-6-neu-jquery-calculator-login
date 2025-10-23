@@ -1,11 +1,38 @@
+<!-- partA/calculator.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="js/main.js"></script>
+  </head>
+  <body class="calc-page">
+    <header class="calc-header">
+      <h2 id="welcomeMsg"></h2>
+      <button id="logoutBtn">Logout</button>
+    </header>
+
+    <div class="calculator">
+      <label>Number 1</label>
+      <input type="text" id="num1" />
+      <span class="error" id="num1Error"></span>
+
+      <label>Number 2</label>
+      <input type="text" id="num2" />
+      <span class="error" id="num2Error"></span>
+
+      <div class="operations">
+        <button class="op-btn" data-op="add">Add</button>
+        <button class="op-btn" data-op="subtract">Subtract</button>
+        <button class="op-btn" data-op="multiply">Multiply</button>
+        <button class="op-btn" data-op="divide">Divide</button>
+      </div>
+
+      <label>Result</label>
+      <input type="text" id="result" readonly />
+    </div>
+  </body>
 </html>
