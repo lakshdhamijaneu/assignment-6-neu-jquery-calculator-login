@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | NEU Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="js/main.js"></script>
+  </head>
+  <body class="login-page">
+    <div class="login-container">
+      <h2>NEU Calculator Login</h2>
+      <form id="loginForm">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="you@northeastern.edu" />
+        <span class="error" id="emailError"></span>
+
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter password" />
+        <span class="error" id="passwordError"></span>
+
+        <div class="remember-row">
+          <label><input type="checkbox" id="rememberMe" /> Remember Me</label>
+        </div>
+
+        <button id="loginBtn" disabled>Login</button>
+        <span class="error" id="loginError"></span>
+        <div class="success" id="loginSuccess"></div>
+      </form>
+    </div>
+  </body>
 </html>
