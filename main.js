@@ -5,7 +5,8 @@ $(document).ready(() => {
     { email: "student2@northeastern.edu", password: "password456" },
   ];
 
-  const validateEmail = (email) => /^[\w.-]+@northeastern\.edu$/i.test(String(email).trim());
+  const validateEmail = (email) =>
+    /^[\w.-]+@northeastern\.edu$/i.test(String(email).trim());
   const validatePassword = (pw) => pw.length >= 8;
 
   const checkFormValidity = () => {
@@ -31,6 +32,13 @@ $(document).ready(() => {
       $("#passwordError").text("Password must be at least 8 characters");
     else $("#passwordError").text("");
     checkFormValidity();
+  });
+
+  $("#email, #password").on("focus", function () {
+    const id = this.id;
+    if (id === "email") $("#emailError").text("");
+    if (id === "password") $("#passwordError").text("");
+    $("#loginError").text(""); // clears top-level login error as user edits
   });
 
   $("#loginForm").on("submit", function (e) {
