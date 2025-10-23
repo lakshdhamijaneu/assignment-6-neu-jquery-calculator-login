@@ -5,7 +5,7 @@ $(document).ready(() => {
     { email: "student2@northeastern.edu", password: "password456" },
   ];
 
-  const validateEmail = (email) => /^[\\w.-]+@northeastern\\.edu$/.test(email);
+  const validateEmail = (email) => /^[\w.-]+@northeastern\.edu$/i.test(String(email).trim());
   const validatePassword = (pw) => pw.length >= 8;
 
   const checkFormValidity = () => {
